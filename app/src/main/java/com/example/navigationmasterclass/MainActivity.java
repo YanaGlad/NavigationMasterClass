@@ -18,7 +18,10 @@ public class MainActivity extends AppCompatActivity {
 
         binding.activityNav.setOnClickListener(view -> {
             Intent intent = new Intent(this, SecondActivity.class);
+            intent.putExtra(TEXT_KEY, "Hello World");
             startActivity(intent);
         });
     }
+
+    public static final String TEXT_KEY = "text";
 }

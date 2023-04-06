@@ -14,5 +14,9 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivitySecondBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        Bundle arguments = getIntent().getExtras();
+        String subtitle = arguments.get(MainActivity.TEXT_KEY).toString();
+        binding.subtitle.setText(subtitle);
     }
 }
