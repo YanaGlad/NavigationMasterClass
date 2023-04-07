@@ -16,9 +16,19 @@
         android:text="@string/nav_to_second_activity"
         android:textColor="@color/white" />
 
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/jetpack_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:background="@drawable/ripple"
+        android:text="@string/jetpak_navigation"
+        android:textColor="@color/white" />
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

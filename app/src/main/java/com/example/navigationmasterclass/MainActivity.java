@@ -1,12 +1,13 @@
 package com.example.navigationmasterclass;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.navigationmasterclass.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends FragmentActivity {
 
     ActivityMainBinding binding;
 
@@ -27,6 +28,13 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction()
                 .add(R.id.nav_host_fragment, FirstFragment.class, null)
                 .commit();
+
+
+        binding.jetpackNav.setOnClickListener(view -> {
+                    Intent intent = new Intent(this, NavigationActivity.class);
+                    startActivity(intent);
+                }
+        );
     }
 
     public static final String TEXT_KEY = "text";
